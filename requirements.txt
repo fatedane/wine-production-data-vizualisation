@@ -2,6 +2,6 @@ streamlit
 folium
 streamlit_folium
 pandas
-geopandas==0.9.0
-matplotlib.pyplot
-plotly.graph_objects    
+geopandas
+matplotlib
+plotly
