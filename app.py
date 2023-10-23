@@ -1,6 +1,6 @@
 import streamlit as st
 
-from projet import (
+from modules.projet import (
     side_bar,
     display_map,
     display_charts,
@@ -19,6 +19,9 @@ def main():
     géo = géo_load()
     display_map(prod, géo)
     display_charts(prod, st.session_state["dep"])
+    
+    
+    
 if __name__ == "__main__":
     main()
     
