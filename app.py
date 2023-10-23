@@ -6,7 +6,7 @@ from modules.projet import (
     display_charts,
 )
 
-from cache import(
+from modules.cache import(
     géo_load,
     data_true
 )
