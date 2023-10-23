@@ -1,10 +1,6 @@
 import streamlit as st
 import pandas as pd
 import geopandas as gpd
-import folium
-from streamlit_folium import st_folium 
-import plotly.graph_objects as go
-import matplotlib.pyplot as plt
 
 @st.cache_data
 def data_load() : 
