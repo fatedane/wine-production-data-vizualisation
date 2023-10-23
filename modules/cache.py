@@ -55,7 +55,7 @@ def data_true ():
     df.at[len(df) - 1, 'num&nom_dep'] = "00 Total"
     df['num&nom_dep'] = df['num&nom_dep'].astype(str)
     df['code_dep'] = df['num&nom_dep'].apply(lambda x: x[:2])
-    # df['code_dep'] = df['code_dep'].str.replace('O', '0')
+    df['code_dep'] = df['code_dep'].str.replace('O', '0')
     df = df.drop([96,97])
     df = df.reset_index(drop=True)
     
@@ -70,5 +70,7 @@ def data_true ():
     df['Total autre'] = df['qte autre blanc'] + df['qte autre rouge/rose']
     df['Total VDP'] = df ['qte VDP blanc'] + df['qte VDP rouge/rose']
     df = df.fillna(0)
+    
+    # st.write(df)
 
     return df
