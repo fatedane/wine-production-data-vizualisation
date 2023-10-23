@@ -1,10 +1,4 @@
 import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
-import geopandas as gpd
-import folium
-from streamlit_folium import st_folium  
-
 
 
 from projet import (
