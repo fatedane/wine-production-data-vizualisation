@@ -1,3 +1,0 @@
-1. l'échelle sur le graphique de la bonne couleur avec les bonnes valeurs
-
-6. ajouter la quantité de production ou le nom sur chaque département 
