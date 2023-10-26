@@ -10,12 +10,11 @@ st.title("Application de Visualisation de Données")
 
 def side_bar ():
     with st.sidebar:
-        st.subheader('nom : Tavani')
-        st.subheader('prénom : Lucas')
-        st.subheader('groupe : BIA2')
+        st.subheader('Tavani')
+        st.subheader('Lucas')
+        st.subheader('BIA2')
         st.subheader('[Linkedin](www.linkedin.com/in/lucas-tavani-2002z/)')
         st.subheader('[Github](https://github.com/fatedane)')
-        st.subheader('#data vizualisation 2023 efrei')
         st.subheader('Supervised by Djallel DILMI ')
 
 def initialize_map():
@@ -72,8 +71,8 @@ def render_streamlit_map(map, key):
     if "dep" not in st.session_state :
         st.session_state["dep"] = "00"
         
-    st.write("Click on a department on the map to select it, or :")
-    if st.button("Click here to select all departments"):
+    st.write("Cliquez sur un département de la carte pour le séléctionner :")
+    if st.button("Cliquez ici pour séléctionner tous les départments"):
         st.session_state["dep"] = "00"
     elif st_map["last_active_drawing"]:
         st.session_state["dep"] = st_map["last_active_drawing"]["properties"]["code"]
@@ -132,7 +131,7 @@ def linear_chart(data):
     data = data.iloc[:-1]
     fig = go.Figure(go.Scatter(x=data['nombre de déclarations'], y=data['TOTAL'], mode='markers', marker=dict(size=8)))
     fig.update_traces(text=data['num&nom_dep'], textposition='top center')
-    fig.update_layout(title_text="Productivité humaine par département")
+    fig.update_layout(title_text="Productivité par département")
     return fig
     
 def top_n_dep_wine(n, wine_type, ordre, data):
